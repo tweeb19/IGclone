@@ -1,0 +1,35 @@
+<article class="comment-container">
+  <div class="comment-section">
+    <div *ngIf="true; then thenBlock"></div>
+    <ng-template #thenBlock>
+      <p class="view-more" (click)="showCommentFunc()" [class.new-class]="!showComment">
+        View more comments
+      </p>
+      <div *ngFor="let comment of comments.items; let i = index">
+        <div>
+          <p>
+            <span class="comment-username">{{ comment.username }} </span>
+            <span *ngIf="showAll(i)">{{ comment.body }}</span><span *ngIf="!showAll(i)">{{ comment.body | slice: 0:100
+              }}<span *ngIf="comment.body.length > 100" class="view-more" (click)="showMore(i)">...more</span></span>
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  
+  <form class="addcomment-card" #commentForm="ngForm" (submit)="onSubmit()" *ngIf="isUserLogged()">
+    <div class="form-section">
+      <div class="comment-group">
+        <textarea type="text" 
+          id="comment-box"
+          placeholder="Add a comment..." 
+          [(ngModel)] = "uploadComment.body"
+          name="comment"
+          required
+          >    
+        </textarea>
+        <button type="submit" [disabled]="commentForm.invalid">↑</button>
+      </div>
+   </div>
+  </form>
+</article>

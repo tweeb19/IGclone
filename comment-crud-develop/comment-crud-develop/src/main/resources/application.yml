@@ -1,0 +1,60 @@
+# Anything that goes here is made globally for all profiles.
+spring:
+  application:
+    name: Comment-CRUD
+
+---
+# Anything that goes here is made specifically for dev's profile.
+
+---
+# Anything that goes here is made specifically for clouds's profile.
+# Cloud is the default profile that Google Clound Foundry makes your application use if you do not override it.
+spring:
+  profiles: cloud
+
+
+---
+# Anything that goes here is made specifically for local's profile.
+spring:
+  profiles: cloud, default
+server:
+  port: 8080
+fems:
+  url: http://34.133.4.60
+
+---
+# Anything that goes here is made specifically for local's profile.
+# Switch default back to cloud once routes are set up.
+spring:
+  profiles: local
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  datasource:
+    url: jdbc:h2:mem:file
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+server:
+  port: 8086
+fems:
+  url: http://34.133.4.60
+ui:
+  url: http://localhost:4200
+post:
+  url: http://localhost:8085
+comment:
+  url: http://localhost:8086
+user:
+  url: http://localhost:8087
+
+
+

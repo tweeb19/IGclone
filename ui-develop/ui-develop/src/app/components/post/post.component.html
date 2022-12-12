@@ -1,0 +1,65 @@
+<div
+  infinite-scroll
+  [infiniteScrollDistance]="distance"
+  [infiniteScrollThrottle]="throttle"
+  class="content"
+  (scrolled)="onScroll()"
+>
+  <div class="post-card" *ngFor="let post of serviceData.items; let i = index">
+    <div class="header">
+      <img
+        *ngIf="post.user.profileImg == ''"
+        class="profile-pic"
+        src="assets/images/circle.png"
+        alt="Default"
+      />
+      <img
+        *ngIf="post.user.profileImg != ''"
+        class="profile-pic"
+        [src]="post.user.profileImg"
+        alt="Profile Picture"
+      />
+      <h3 class="username">{{ post.user.username }}</h3>
+      <div class="pp-nav-menu">
+        <ul class="nav-ul">
+          <li tabindex="1" class="pp-dropdown-toggle">
+            <strong>. . .</strong>
+            <ul class="pp-dropdown">
+              <button class="delete" (click)="deletePost()">Delete Post</button>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="image">
+      <img
+        class="post-image"
+        *ngIf="post.img != '' && post.img != null"
+        [src]="post.img"
+        alt="Post Image"
+      />
+    </section>
+    <article class="comment-container">
+      <div class="comment-header">
+        <img id="heart" src="assets/images/Likes.png" alt="" />
+        <p class="comment-btn">
+          12 likes {{ post.comment.totalElements }} comments
+        </p>
+        <p class="comment-post">
+          <span class="post-username">{{ post.user.username }} </span>
+          <span *ngIf="showAll(i)">{{ post.description }}</span>
+          <span *ngIf="!showAll(i)"
+            >{{ post.description | slice: 0:101 }}
+            <span
+              *ngIf="post.description.length > 101"
+              class="view-more"
+              (click)="showMore(i)"
+              >...more</span
+            >
+          </span>
+        </p>
+      </div>
+      <app-comments [postId]="post.id" [increment]="increment"></app-comments>
+    </article>
+  </div>
+</div>

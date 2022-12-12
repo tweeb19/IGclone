@@ -1,0 +1,75 @@
+<nav>
+  <div class="container">
+    <div class="logo-container" [ngStyle]="{'margin-left': !onLoginPage() ? '-300px' : '-675px'}">
+      <div class="pixelgram-logo">
+        <a routerLink="/">
+          <img
+            src="assets/images/pixelgram_logo.svg"
+            class="logo-image"
+            alt="pixelgram logo"
+          />
+        </a>
+      </div>
+      <div class="logo-divider"></div>
+      <div class="pixelgram" routerLink="/">Pixelgram</div>
+    </div>
+
+    <input
+      type="text"
+      class="rectangle-3"
+      name="searchBar"
+      id="search-bar"
+      placeholder="Search"
+      *ngIf="!onLoginPage()"
+    />
+
+    <div class="plus-container" *ngIf="isUserLogged()">
+      <div class="plus">
+        <a routerLink="/addpost">
+          <img src="../../../assets/images/Add.png" alt="add post button"/>
+        </a>
+      </div>
+    </div>
+    <div
+      *ngIf="!onLoginTwoPage()"
+      class="rel"
+      (mouseenter)="isOpen = true"
+      (mouseleave)="isOpen = false"
+    >
+      <a
+        class="profile"
+        cdkOverlayOrigin
+        (click)="isOpen = !isOpen"
+        #trigger="cdkOverlayOrigin"
+      >
+        <img src="../../../assets/images/profile.png" alt="" />
+      </a>
+      <div class="login-container">
+        <ul class="example-overlay">
+          <a routerLink="/login">
+            <button
+            class="login"
+            [class.vis]="!isOpen"
+            *ngIf="!isUserLogged()"
+            routerLink="login"
+          >
+            Login
+          </button>
+          </a>
+          
+          <a routerLink="/">
+            <button
+            class="login"
+            [class.vis]="!isOpen"
+            *ngIf="isUserLogged()"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+          </a>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

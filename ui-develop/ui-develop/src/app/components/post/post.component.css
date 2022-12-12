@@ -1,0 +1,155 @@
+.content {
+  margin-top: 60px;
+  display: grid;
+  place-items: center;
+  background-color: #FAFAFA;
+}
+/* Post CSS */
+.post-card {
+  margin-top: 40px;
+  width: 600px;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+
+.profile-pic {
+  position: relative;
+  margin: 10px 10px 15px;
+  border-radius: 100px;
+  width: 40px;
+  background: gray;
+}
+
+.post-image {
+  width: 100%;
+  height:614px;
+  object-fit: cover;
+}
+
+#heart {
+  width: 21.8px;
+  height: 20px;
+  position: absolute;
+}
+.view-more {
+  cursor: pointer;
+  color: #ababab;
+}
+.post-username {
+  font-weight: 550;
+  font-style: medium;
+}
+.comment-container {
+  padding: 15px;
+}
+.comment-btn {
+  color: #ababab;
+  margin-left: 30px;
+}
+.comment-post {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  height: 60px;
+}
+.username {
+  position: relative;
+  left: 65px;
+  bottom: 55px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Delete Post Dropdown */
+.pp-nav-menu ul > li {
+  float: right;
+  position: relative;
+  right: 0;
+  margin-right: 25px;
+}
+
+.pp-dropdown-toggle {
+  list-style: none;
+  border-radius: 3px;
+  height: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 500;
+  text-decoration-line: none;
+  top: -93.5px;
+  cursor: pointer;
+}
+
+.pp-dropdown-toggle:hover {
+  background-color: rgba(143, 143, 143, 0.19);
+}
+
+.pp-dropdown-toggle .pp-dropdown {
+  visibility: hidden;
+  position: absolute;
+  width: 0px;
+  right: 0;
+  margin-right: 100px;
+  top: 100%;
+}
+
+.pp-dropdown-toggle:hover > ul.pp-dropdown,
+.pp-dropdown-toggle:focus > ul.pp-dropdown {
+  visibility: visible;
+  list-style: none;
+  text-align: center;
+  transition: 2s;
+}
+
+.pp-dropdown-toggle li:not(:hover) > ul.pp-dropdown,
+.pp-dropdown-toggle li:not(:focus) > ul.pp-dropdown {
+  visibility: hidden;
+}
+
+.delete {
+  position: absolute;
+  width: 100px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 3px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+.delete:focus {
+  background-color: lightgrey;
+  transition: 1s;
+}
+
+.delete:not(:hover) {
+  padding: 5px;
+  background-color: white;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: right;
+}
+@media (max-width: 600px) {
+  .post-card {
+    margin-top: 40px;
+    width: 300px;
+  }
+
+  .profile-pic {
+    width: 30px;
+  }
+
+  .header {
+    height: 50px;
+  }
+
+  .username {
+    margin-top: 5px;
+  }
+}

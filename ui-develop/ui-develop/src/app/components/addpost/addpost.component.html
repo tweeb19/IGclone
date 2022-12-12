@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="addpost-container">
+        <form class="addpost-card" #postForm="ngForm" (submit)="onSubmit()">
+            <div class="logo-center">
+                <div class="logo-container">
+                    <div class="pixelgram-logo">
+                        <img src="assets/images/pixelgram_logo.svg" class="logo-image" alt="pixelgram logo" />
+                    </div>
+                    <div class="logo-divider"></div>
+                    <div class="pixelgram" routerLink="/login">Create Post</div>
+                </div>
+                    <div class="image-upload-btn">
+                        <input
+                            ngModel
+                            required
+                            #upload = "ngModel"
+                            type="file"
+                            name="upload"
+                            id="upload"
+                            (change)="onFileSelected($event)"
+                        >
+                        <button id="create-post">
+                             Choose Image
+                        </button>
+                    </div>
+                    <p>{{ message }}</p>
+                    <div 
+                    class="image-error"
+                    id="upload-error"
+                    *ngIf="(upload.touched && upload.invalid)"
+                    >    
+                    * Image is required
+                </div>
+                <textarea 
+                required
+                [(ngModel)]="uploadForm.description"
+                #description = "ngModel"
+                type="text" 
+                name="description"
+                id="description"
+                placeholder="Description...."
+                class="image-description"                 
+                ></textarea>
+                <div 
+                    class="description-error"
+                    id="description-error"
+                    *ngIf="(description.touched && description.invalid)"
+                    >
+                    * Description is required
+                </div>
+                <div class="btn-container">
+                    <button class="cancel-btn postbutton"  routerLink="/">Cancel</button>
+                    <button class="create-btn postbutton" type="submit" [disabled]="postForm.invalid" >Create Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

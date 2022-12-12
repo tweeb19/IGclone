@@ -1,0 +1,1 @@
+insert into comment (body, created_on, post_id, username) values ('Integer ac neque.', '2022-03-08', 10, 'twhitmore0');

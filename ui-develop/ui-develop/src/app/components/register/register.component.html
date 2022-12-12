@@ -1,0 +1,31 @@
+
+    <app-navbar></app-navbar>
+    <div class="container" *ngIf="!isUserLogged()">
+        <form class="login-card" #loginForm="ngForm">
+            <div class="logo-center">
+                <div class="logo-container">
+                  <div class="pixelgram-logo">
+                    <img
+                      src="assets/images/pixelgram_logo.svg"
+                      class="logo-image"
+                      alt="pixelgram logo"
+                    />
+                  </div>
+                  <div class="logo-divider"></div>
+                  <div class="pixelgram" routerLink="/register" >Register</div>
+                </div>
+              </div>
+            <div>
+                <input required ngModel #username="ngModel" type="text" name="username" id="username" placeholder="Username" (change)="checkInputUser()">
+                <div class="error" id="username-error" *ngIf="(username.touched && username.invalid) || !usernameFlag">* Username is required</div>
+                <div class="error" id="username-error" *ngIf="!uniqueFlag && !username.invalid">* Username is taken</div>
+            </div>
+            <div>
+                <input required ngModel #password="ngModel" type="password" name="password" id="password" placeholder="Password" (change)="checkInputPass()">
+                <div class="error" id="password-error" *ngIf="(password.touched && password.invalid) || !passwordFlag">* Password is required</div>
+            </div>
+            <div class="authSection">
+                <button class="buttonfromfigma" id="login" type="submit" (click)="validCredentials(username.value, password.value)">Register</button>
+            </div>
+        </form>
+    </div>

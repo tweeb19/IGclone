@@ -1,0 +1,34 @@
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/women/29.jpg', 'twhitmore0', 1);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/men/43.jpg', 'ejaye1', 2);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/44.jpg', 'jreah4', 3);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/women/44.jpg', 'epaddeley5', 4);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/40.jpg', 'aspurritt6', 5);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/men/40.jpg', 'jdocwra7', 6);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/men/25.jpg', 'ejest8', 7);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/men/32.jpg', 'njikovsky9', 8);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/32.jpg', 'egumba', 9);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/39.jpg', 'lcawsbyf', 10);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/men/39.jpg', 'astroobantg', 11);
+insert into User (profile_img, username, id) values ('https://randomuser.me/api/portraits/women/27.jpg', 'taureliush', 12);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/27.jpg', 'dadamseni', 13);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/11.jpg', 'dtretheweyk', 14);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/11.jpg', 'rperrellel', 15);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/19.jpg', 'kpepinm', 16);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/19.jpg', 'kloadesn', 17);
+insert into User (profile_img, username, id)  values ('', 'fdegoyo', 18);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/33.jpg', 'gthickpennyr', 19);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/46.jpg', 'kkittles', 20);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/49.jpg', 'lissacsont', 21);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/99.jpg', 'user1', 22);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/99.jpg', 'user2', 23);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/98.jpg', 'user3', 24);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/98.jpg', 'user4', 25);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/97.jpg', 'user5', 26);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/97.jpg', 'user6', 27);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/96.jpg', 'user7', 28);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/96.jpg', 'user8', 29);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/95.jpg', 'user9', 30);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/men/95.jpg', 'user10', 31);
+insert into User (profile_img, username, id)  values ('https://randomuser.me/api/portraits/women/94.jpg', 'user11', 32);
+
+

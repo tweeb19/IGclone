@@ -1,0 +1,13 @@
+html, body{
+    height: 100vh;
+    width: 100%;
+    background: #FAFAFA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1500px){
+    html, body{
+        padding-bottom: 200px !important;
+    }
+}

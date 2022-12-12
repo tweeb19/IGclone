@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<div class="container" *ngIf="!isUserLogged()">
+  <form class="login-card" #loginForm="ngForm">
+    <div class="logo-center">
+      <div class="logo-container">
+        <div class="pixelgram-logo">
+          <img
+            src="assets/images/pixelgram_logo.svg"
+            class="logo-image"
+            alt="pixelgram logo"
+          />
+        </div>
+        <div class="logo-divider"></div>
+        <div class="pixelgram" routerLink="/login">Login</div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="error"
+        id="session-error"
+        *ngIf="sessionFlag"
+      >
+        * Your login session has expired. Please login again.
+      </div>
+      <input
+        required
+        ngModel
+        #username="ngModel"
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Username"
+        (change)="checkInputUser()"
+      />
+      <div
+        class="error"
+        id="username-error"
+        *ngIf="(username.touched && username.invalid) || !usernameFlag"
+      >
+        * Username is required
+      </div>
+    </div>
+    <div>
+      <input
+        required
+        ngModel
+        #password="ngModel"
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        (change)="checkInputPass()"
+      />
+      <div
+        class="error"
+        id="password-error"
+        *ngIf="(password.touched && password.invalid) || !passwordFlag"
+      >
+        * Password is required
+      </div>
+      <div class="error" id="credentials-error" *ngIf="!tokenCheck">
+        * Username or password incorrect
+      </div>
+    </div>
+    <div class="authSection">
+      <a id="register" class="pointer" routerLink="/register">Register</a>
+      <button
+        type="submit"
+        id="login"
+        (click)="validCredentials(username.value, password.value)"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>

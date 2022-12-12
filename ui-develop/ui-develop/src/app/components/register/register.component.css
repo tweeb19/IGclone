@@ -1,0 +1,190 @@
+@import url("http://fonts.cdnfonts.com/css/billabong");
+.container {
+  height: fit-content;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+}
+/* Login CSS */
+.login-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 616px;
+  height: 587px;
+}
+.logo-center {
+  display: grid;
+  place-items: center;
+  margin-top: 60px;
+}
+.logo-container {
+  display: inline-flex;
+}
+
+.logo-image {
+  height: 53px;
+  margin-right: 20px;
+}
+
+
+.logo-divider {
+  width: 0.92px;
+  height: 45px;
+  margin-top: 4px;
+  background-color: #2a2a2a;
+}
+
+.pixelgram {
+  margin-left: 20px;
+  margin-top: 18px;
+
+  font-family: "Billabong", sans-serif, Helvetica, Arial, Verdana, Tahoma;
+  font-weight: 400;
+  font-size: 46px;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+  color: #262626;
+}
+
+input {
+  position: absolute;
+  width: 524px;
+  height: 57px;
+  left: 44px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding-left: 18px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.025em;
+  color: #000;
+}
+
+input::-webkit-input-placeholder {
+  color: #e6e6e6;
+}
+
+#username {
+  margin-top: 98px;
+}
+
+#password {
+  margin-top: 198px;
+}
+
+button {
+  position: absolute;
+  width: 118px;
+  height: 45px;
+  margin-top: 328px;
+  left: 450px;
+
+  background: #5197e9;
+  border-radius: 3px;
+  border-width: 0px;
+}
+button:hover {
+  background: #4d90dd;
+}
+#register {
+  position: absolute;
+  width: 70px;
+  height: 18px;
+  margin-top: 341px;
+  left: 335px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.025em;
+  color: #262626;
+}
+#login {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.025em;
+  color: #fffefe;
+  cursor: pointer;
+}
+
+/* Error CSS */
+.error {
+  position: absolute;
+  left: 44px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.025em;
+  color: #cb5b5b;
+}
+
+#username-error {
+  margin-top: 164px;
+}
+
+#password-error {
+  margin-top: 263px;
+}
+
+#credentials-error {
+  margin-top: 302px;
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    width: 300px;
+    height: 530px;
+  }
+
+  .container {
+    margin-top: 100px;
+  }
+
+  input {
+    width: 250px;
+    height: 57px;
+    left: 25px;
+  }
+
+  #username {
+    margin-top: 48px;
+  }
+
+  #password {
+    margin-top: 148px;
+  }
+
+  .error {
+    left: 25px;
+  }
+
+  button {
+    left: 150px;
+    margin-top: 308px;
+  }
+
+  #register {
+    margin-top: 321px;
+    left: 55px;
+  }
+
+  #username-error {
+    margin-top: 114px;
+  }
+
+  #password-error {
+    margin-top: 213px;
+  }
+
+  #credentials-error {
+    margin-top: 252px;
+  }
+}
